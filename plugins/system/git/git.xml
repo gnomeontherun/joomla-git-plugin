@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="system">
+	<name>plg_system_git</name>
+	<author>Gnome on the run</author>
+	<creationDate>November 2012</creationDate>
+	<copyright>Copyright (C) 2012 Gnome on the run. All rights reserved.</copyright>
+	<license>GNU General Public License version 3 or later</license>
+	<authorEmail></authorEmail>
+	<authorUrl>www.gnomeontherun.com</authorUrl>
+	<version>1.0.a</version>
+	<description>PLG_SYSTEM_GIT_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="git">git.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_system_git.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_system_git.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="git_path" label="Git command or path" description="If git is not available in the $PATH, then update this to the full path to the git application." value="git" />
+				<field name="git_branch" label="Branch to use" description="This will automatically checkout and commit changes to this branch. You need to make sure it is already created though, it will not branch for you." value="staging" />
+				<field name="git_message" label="Message" description="The automatic commit message. You can use [date] to replace with a timestamp." value="Automatic commit at [date]" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>
